@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+* {
+    font-family: 'Kalam', cursive;
+    
+}
+h1 {
+    font-size: 60px;
+    margin-bottom: 0px;
+    color: white;
+}
+body {
+    
+    background-image: linear-gradient(to left top, #413e92, #2d3a77, #23335b, #212a3f, #202123);
+    background-size: cover;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+}
+#game-container {
+    text-align: center;
+}
+#cell-container{
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+button {
+    background-color: #465b86;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border-radius: 4vmin;
+    border: 0.1vmin solid #ffffff;
+    color: #10345f;
+   
+  }
+  button:hover {
+    transform: scale(1.2);
+    transition: transform 200ms ease-in;
+    color: #0557b6;
+    background-color: #161616;
+    
+  }
