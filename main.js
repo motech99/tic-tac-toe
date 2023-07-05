@@ -37,12 +37,24 @@ function cellClicked() {
 }
 function updateCell(cell, index) {
     options[index] = currentPlayer;
-    cell.textContent = currentPlayer
-
+  cell.textContent = currentPlayer;
+  if (currentPlayer === "X") {
+    cell.style.color = "#00faff";
+  } else if (currentPlayer === "O") {
+     cell.style.color = "#4dadff";
+  }
+  
 }
+
+
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn!`;
+  if(currentPlayer === "X") {
+    statusText.style.color = `#00faff`;
+  } else {
+    statusText.style.color = "#4dadff";
+  }
 }
 function checkWinner(){
     let roundWon = false;
@@ -77,6 +89,9 @@ function restartGame(){
     currentPlayer = "X"
     options = ["", "", "", "", "", "", "", "", "", ];
     statusText.textContent = `${currentPlayer}'s turn`;
-    cells.forEach(cell => cell.textContent = "");
+    cells.forEach(cell => {
+      cell.textContent = "";
+      cell.style.color = "white";
+    });
     running = true;
 }
